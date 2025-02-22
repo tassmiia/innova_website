@@ -35,7 +35,7 @@ const ContactPage = () => {
             </div>
             <div className="flex items-center gap-3 text-gray-700">
               <Mail className="text-blue-500" size={18} />
-              <p>tasmiakhan@gmail.com</p>
+              <p>ennova et @ gmail.com</p>
             </div>
           </div>
 
