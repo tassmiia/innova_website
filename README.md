@@ -3,7 +3,6 @@
 [![Next.js](https://img.shields.io/badge/Built%20with-Next.js-000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/Styled%20with-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com/)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 ---
 
