@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { X, AlignJustify, UserCog } from "lucide-react";
+import { X, AlignJustify } from "lucide-react";
 import Link from "next/link";
 import DropdownMenu from "./drop-down-menu";
 
@@ -31,14 +31,6 @@ const ActionButtons = () => {
         <Link href={"/contact"}>
           <Button className="hidden text-[#090a22] text-md font-light bg-[#eff0ff] p-6 rounded-[10px] transition-all duration-300 shadow-md md:hidden lg:flex hover:shadow-lg hover:bg-[#dfe6f9] hover:scale-105">
             +91 4555 XXXXX
-          </Button>
-        </Link>
-
-        {/* Admin Login Button */}
-        <Link href={"/admin-login"}>
-          <Button className="hidden text-[#090a22] text-md font-light bg-[#eff0ff] p-6 rounded-[10px] transition-all duration-300 shadow-md md:hidden lg:flex hover:shadow-lg hover:bg-[#dfe6f9] hover:scale-105">
-            <UserCog className="h-5 w-5" />
-            {/* <span className="hidden md:block">Admin Login</span> */}
           </Button>
         </Link>
       </div>

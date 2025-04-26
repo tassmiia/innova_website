@@ -18,8 +18,8 @@ export default function FirstSection() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        // Add company filter here for Marut Air
-        const res = await fetch("/api/admin/products?company=marut-air");
+        // Fetch only Atlas Copco products
+        const res = await fetch("/api/admin/products?company=atlas-copco");
         const data = await res.json();
         setProducts(data);
       } catch (error) {
@@ -33,10 +33,13 @@ export default function FirstSection() {
   return (
     <section className="py-16 px-6">
       {/* Banner */}
-      <div className="bg-gradient-to-r from-[#004d80] to-[#005b8c] text-white text-center py-20 mb-12 sticky top-0 z-20">
-        <h2 className="text-4xl font-bold mb-4">Explore Marut Air Products</h2>
+      <div className="bg-gradient-to-r from-[#002e5d] to-[#005b8c] text-white text-center py-20 mb-12 sticky top-0 z-20">
+        <h2 className="text-4xl font-bold mb-4">
+          Explore Atlas Copco Products
+        </h2>
         <p className="text-lg font-light">
-          Premium air solutions tailored for your business needs
+          Innovative compressed air & industrial equipment engineered for
+          excellence
         </p>
       </div>
 
@@ -48,12 +51,12 @@ export default function FirstSection() {
             href={product.link || "#"}
             className="bg-white border rounded-lg p-4 shadow-lg transition-transform duration-300 hover:shadow-2xl hover:scale-105"
           >
-            <div className="w-full h-48 relative mb-6 overflow-hidden rounded-lg">
+            <div className="w-full aspect-square relative mb-6 overflow-hidden rounded-lg">
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-cover rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="object-contain rounded-lg transition-all duration-300 transform hover:scale-105"
               />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-[#2b1c50]">

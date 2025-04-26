@@ -49,7 +49,7 @@ const items: MenuItem[] = [
       {
         label: "ATLAS COPCO",
         emoji: <TrafficConeIcon className="text-blue-500" />,
-        href: "/team-alignment",
+        href: "/atlas-copco",
       },
       {
         label: "MARUT AIR",
@@ -68,16 +68,16 @@ const items: MenuItem[] = [
     title: "Facilities",
     menu: "facilities",
     options: [
-      {
-        label: "Customers",
-        emoji: <Smile className="text-indigo-500" />,
-        href: "/",
-      },
+      // {
+      //   label: "Customers",
+      //   emoji: <Smile className="text-indigo-500" />,
+      //   href: "/",
+      // },
 
       {
         label: "Gallery",
         emoji: <Camera className="text-orange-500" />,
-        href: "/",
+        href: "/Gallery",
       },
     ],
   },
@@ -91,15 +91,10 @@ const items: MenuItem[] = [
         emoji: <FileCheck2 className="text-red-500" />,
         href: "/",
       },
-      {
-        label: "Industry we serve",
-        emoji: <Factory className="text-blue-500" />,
-        href: "/careers",
-      },
       // {
-      //   label: "Newsroom",
-      //   emoji: <Newspaper className="text-blue-500" />,
-      //   href: "/newsroom",
+      //   label: "Industry we serve",
+      //   emoji: <Factory className="text-blue-500" />,
+      //   href: "/careers",
       // },
     ],
   },

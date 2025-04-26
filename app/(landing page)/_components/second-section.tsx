@@ -43,7 +43,6 @@ const SecondSection = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  // For keeping track of the current index
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -70,14 +69,12 @@ const SecondSection = () => {
         </h2>
       </div>
 
-      {/* Modern Carousel */}
       <div className="relative">
-        {/* Product Cards Wrapper */}
         <div className="overflow-hidden">
           <div
             className="flex transition-all duration-700 ease-in-out"
             style={{
-              transform: `translateX(-${currentIndex * 25}%)`, // Move by 25% per product
+              transform: `translateX(-${currentIndex * 25}%)`,
             }}
           >
             {products.map((product) => (
@@ -93,22 +90,15 @@ const SecondSection = () => {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  {/* Product Title */}
                   <h4 className="text-lg font-semibold text-[#2b1c50] mb-4">
                     {product.name}
                   </h4>
-
-                  {/* View Details Button */}
-                  <button className="bg-indigo-600 text-white px-6 py-2 rounded-md transition-all duration-300 hover:bg-indigo-500">
-                    View Details
-                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Navigation Arrows */}
         <button
           className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-indigo-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-indigo-500 z-10"
           onClick={handlePrev}

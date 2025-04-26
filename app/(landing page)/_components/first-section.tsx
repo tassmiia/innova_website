@@ -1,6 +1,8 @@
 "use client"; // Ensure it's a client-side component
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const images = [
   "/images/atlaas.webp",
@@ -51,7 +53,7 @@ const TrustedPartnersSection = () => {
           observer.disconnect(); // Stop observing once it's visible
         }
       },
-      { threshold: 0.1 } // Trigger when at least 10% of the section is visible
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -130,17 +132,20 @@ const FirstSection = () => {
         </p>
 
         <div className="flex gap-6 py-6">
-          <button
-            className="
-              xl:text-1xl text-small font-light
-              rounded-[10px] border-2 border-indigo-500
-              py-6 px-12 xl:py-1 xl:px-8
-              transition-all duration-300 shadow-lg
-              hover:bg-indigo-400 hover:scale-105
-            "
-          >
-            Get a Quote
-          </button>
+          <Link href={"/contactform"}>
+            <Button
+              className="
+                xl:text-1xl text-small font-light
+                rounded-[10px] border-2 border-indigo-500
+                py-6 px-12 xl:py-1 xl:px-8
+                transition-all duration-300 shadow-lg
+                bg-indigo-100 text-indigo-700
+                hover:bg-indigo-400 hover:scale-105
+              "
+            >
+              Get a Quote
+            </Button>
+          </Link>
         </div>
 
         {/* Spacer to push the carousel down */}
@@ -155,9 +160,8 @@ const FirstSection = () => {
                   src={img}
                   alt={`Slide ${index + 1}`}
                   className="rounded-[10px] w-full h-full object-cover filter grayscale transition duration-300"
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }} // Set width and height to 100% of the container
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
-                {/* Faded effect from bottom */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30" />
               </div>
             ))}
@@ -170,9 +174,8 @@ const FirstSection = () => {
                   src={img}
                   alt={`Copy Slide ${index + 1}`}
                   className="rounded-[10px] w-full h-full object-cover filter grayscale transition duration-300"
-                  style={{ objectFit: "cover", width: "100%", height: "100%" }} // Set width and height to 100% of the container
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
-                {/* Faded effect from bottom */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white opacity-50" />
               </div>
             ))}
@@ -188,13 +191,13 @@ const FirstSection = () => {
             {workflowSteps.map((step, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-between relative rounded-lg border overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 bg-[#e0f2ff] border-[#007bff]" // Blue themed colors
-                style={{ padding: "20px" }} // Added padding
+                className="flex flex-col items-center justify-between relative rounded-lg border overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 bg-[#e0f2ff] border-[#007bff]"
+                style={{ padding: "20px" }}
               >
                 <img
                   src={step.illustration}
                   alt={step.title}
-                  className="w-40 h-40 object-cover mb-4" // Set a fixed height and use object-cover
+                  className="w-40 h-40 object-cover mb-4"
                 />
                 <div className="text-center p-2">
                   <h3 className="text-xl font-semibold text-[#13263b]">
